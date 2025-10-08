@@ -40,7 +40,7 @@ const FeedbackSection = () => {
     };
 
     return (
-        <section className="py-20 bg-secondary">
+        <section className="py-20 bg-white dark:bg-black">
             <div className="container mx-auto px-4 max-w-3xl">
                 <div className="text-center mb-12">
                     <h2 className="text-4xl font-bold text-foreground mb-4">Seminar Feedback</h2>
@@ -49,9 +49,9 @@ const FeedbackSection = () => {
                     </p>
                 </div>
 
-                <form onSubmit={handleSubmit} className="space-y-6 bg-card p-8 rounded-2xl shadow-lg">
+                <form onSubmit={handleSubmit} className="space-y-6 bg-pulse-600 p-8 rounded-2xl shadow-lg">
                     <div>
-                        <label className="block text-sm font-medium text-foreground mb-3">
+                        <label className="block text-lg font-medium text-foreground mb-3 text-white">
                             Username
                         </label>
                         <input
@@ -59,13 +59,13 @@ const FeedbackSection = () => {
                             required
                             value={formData.username}
                             onChange={(e) => setFormData({ ...formData, username: e.target.value })}
-                            className="w-full px-6 py-4 text-lg rounded-lg border border-input bg-background text-foreground focus:ring-2 focus:ring-ring focus:border-transparent transition-all"
+                            className="w-full px-6 py-4 text-lg rounded-full bg-[beige] focus:ring-8 focus:ring-ring focus:border-transparent transition-all"
                             placeholder="Enter your name"
                         />
                     </div>
 
                     <div>
-                        <label className="block text-sm font-medium text-foreground mb-3">
+                        <label className="block text-lg font-medium text-foreground mb-3 text-white">
                             Register Number
                         </label>
                         <input
@@ -73,13 +73,13 @@ const FeedbackSection = () => {
                             required
                             value={formData.registerNumber}
                             onChange={(e) => setFormData({ ...formData, registerNumber: e.target.value })}
-                            className="w-full px-6 py-4 text-lg rounded-lg border border-input bg-background text-foreground focus:ring-2 focus:ring-ring focus:border-transparent transition-all"
+                            className="w-full px-6 py-4 text-lg rounded-full border-input bg-[beige] text-foreground focus:ring-8 focus:ring-ring focus:border-transparent transition-all"
                             placeholder="Enter your register number"
                         />
                     </div>
 
                     <div>
-                        <label className="block text-sm font-medium text-foreground mb-3">
+                        <label className="block text-lg font-medium text-foreground mb-3 text-white">
                             Email ID
                         </label>
                         <input
@@ -87,13 +87,13 @@ const FeedbackSection = () => {
                             required
                             value={formData.email}
                             onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                            className="w-full px-6 py-4 text-lg rounded-lg border border-input bg-background text-foreground focus:ring-2 focus:ring-ring focus:border-transparent transition-all"
+                            className="w-full px-6 py-4 text-lg rounded-full border-input bg-[beige] text-foreground focus:ring-8 focus:ring-ring focus:border-transparent transition-all"
                             placeholder="Enter your email address"
                         />
                     </div>
 
                     <div>
-                        <label className="block text-sm font-medium text-foreground mb-3">
+                        <label className="block text-lg font-medium text-foreground mb-3 text-white">
                             Feedback Comments
                         </label>
                         <textarea
@@ -101,7 +101,7 @@ const FeedbackSection = () => {
                             rows={8}
                             value={formData.feedback}
                             onChange={(e) => setFormData({ ...formData, feedback: e.target.value })}
-                            className="w-full px-6 py-4 text-lg rounded-lg border border-input bg-background text-foreground focus:ring-2 focus:ring-ring focus:border-transparent resize-none transition-all"
+                            className="w-full px-6 py-4 text-lg rounded-3xl border-input bg-[beige] text-pulse-600 dark:text-pulse-600 focus:ring-8 focus:ring-ring focus :border-transparent resize-none transition-all"
                             placeholder="Share your detailed feedback here..."
                         />
                     </div>
@@ -109,7 +109,7 @@ const FeedbackSection = () => {
                     <button
                         type="submit"
                         disabled={isSubmitting}
-                        className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-medium py-4 text-lg rounded-lg transition-all duration-300 disabled:opacity-50"
+                        className="w-full bg-pulse-400 hover:bg-white hover:text-black text-white text-primary-foreground font-medium py-4 text-lg rounded-full transition-all duration-300 disabled:opacity-50"
                     >
                         {isSubmitting ? "Submitting..." : "Submit Feedback"}
                     </button>

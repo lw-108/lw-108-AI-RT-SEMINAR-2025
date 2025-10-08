@@ -3,7 +3,7 @@ import { Globe } from "@/components/ui/Globe";
 
 const IntroQuote = () => {
   return (
-    <section className="relative w-full min-h-screen py-20 bg-gradient-to-br from-pulse-50 to-white dark:from-gray-900 dark:to-gray-800 overflow-hidden">
+    <section className="relative w-full min-h-screen py-20 dark:bg-black">
       <div className="section-container opacity-0 animate-on-scroll">
         <div className="max-w-4xl mx-auto text-center">
           {/* Chip */}
@@ -17,8 +17,8 @@ const IntroQuote = () => {
 
           {/* Floating Quote */}
           <blockquote
-  className="fixed top-0 left-1/2 -translate-x-1/2 z-[9999] 
-  text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 
+  className="fixed top-0 left-1/2 -translate-x-1/2 z-[9999]
+  text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl
   font-semibold text-gray-900 dark:text-white leading-snug
   px-3 sm:px-4 lg:px-6 text-center "
 >

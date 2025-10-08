@@ -4,6 +4,7 @@ import React from "react";
 import { cn } from "@/lib/utils";
 import { BentoGrid, BentoGridItem } from "@/components/ui/bento-grid";
 import { motion } from "framer-motion";
+import { Globe } from "./ui/Globe";
 import {
   IconMessageChatbot,
   IconBulb,

@@ -190,7 +190,7 @@ const items = [
         description: "This is pretty cool, right?",
     },
     {
-        image: "https://i.ibb.co/0ysWyhQ7/free-airtable-logo-icon-svg-download-png-1254387.png",
+        image: "https://i.ibb.co/Rkcn1Pfq/images-q-tbn-ANd9-Gc-Qela-D7-G6-XIdl-UTV3uvw-T9hwmb1-ZFyhzq-Kj-A-s.png",
         link: "https://airtable.com/",
         title: "Item 32",
         description: "This is pretty cool, right?",
@@ -354,10 +354,9 @@ const AISettings = () => {
     }, []);
 
     return (
-        <div className="min-h-screen bg-background transition-colors duration-300">
-            <Navbar />
+        <div className="min-h-screen bg-background transition-colors duration-300 mb-16">
             <main className="pt-20">
-                <section className="py-16 bg-secondary">
+                <section className="bg-secondary dark:bg-black mb-16">
                     <div className="section-container opacity-0 animate-on-scroll">
                         <div className="flex items-center gap-4 mb-6">
                             <div className="pulse-chip">

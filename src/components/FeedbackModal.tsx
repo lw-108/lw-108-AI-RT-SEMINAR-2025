@@ -48,21 +48,21 @@ const FeedbackModal: React.FC<FeedbackModalProps> = ({ isOpen, onClose }) => {
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm animate-fade-in"
+      className="fixed inset-0 z-50 flex items-center justify-center animate-fade-in"
       onClick={onClose}
     >
       <div
-        className="bg-white dark:bg-gray-900 rounded-2xl shadow-2xl max-w-md w-full mx-4 animate-scale-in"
+        className="bg-pulse-600 rounded-2xl shadow-2xl max-w-md w-full mx-4 animate-scale-in text-white"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header */}
         <div className="p-6 border-b border-gray-200 dark:border-gray-700 flex justify-between items-center">
-          <h2 className="text-2xl font-bold text-gray-900 dark:text-white">
+          <h2 className="text-2xl font-bold text-white dark:text-white">
             Seminar Feedback
           </h2>
           <button
             onClick={onClose}
-            className="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 transition-colors"
+            className="text-pulse-600 transition-colors bg-white rounded-full"
           >
             <X className="w-6 h-6" />
           </button>
@@ -72,7 +72,7 @@ const FeedbackModal: React.FC<FeedbackModalProps> = ({ isOpen, onClose }) => {
         <form onSubmit={handleSubmit} className="p-6 space-y-4">
           {/* Username */}
           <div>
-            <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+            <label className="block text-sm font-medium text-white dark:text-white-300 mb-2">
               Username
             </label>
             <input
@@ -83,13 +83,13 @@ const FeedbackModal: React.FC<FeedbackModalProps> = ({ isOpen, onClose }) => {
               onChange={(e) =>
                 setFormData({ ...formData, username: e.target.value })
               }
-              className="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
+              className="w-full px-4 py-2 rounded-full border border-white-300 dark:border-white-600 bg-white dark:bg-[beige] text-pulse-900 dark:text-pulse-600 focus:ring-8 focus:ring-ring focus:border-transparent transition-all"
             />
           </div>
 
           {/* Register Number */}
           <div>
-            <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+            <label className="block text-sm font-medium text-white dark:text-white-300 mb-2">
               Register Number
             </label>
             <input
@@ -100,13 +100,13 @@ const FeedbackModal: React.FC<FeedbackModalProps> = ({ isOpen, onClose }) => {
               onChange={(e) =>
                 setFormData({ ...formData, registerNumber: e.target.value })
               }
-              className="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
+              className="w-full px-4 py-2 rounded-full border border-white-300 dark:border-white-600 bg-white dark:bg-[beige] text-pulse-900 dark:text-pulse-600 focus:ring-8 focus:ring-ring focus:border-transparent transition-all"
             />
           </div>
 
           {/* Email */}
           <div>
-            <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+            <label className="block text-sm font-medium text-white dark:text-white-300 mb-2">
               Email ID
             </label>
             <input
@@ -117,13 +117,13 @@ const FeedbackModal: React.FC<FeedbackModalProps> = ({ isOpen, onClose }) => {
               onChange={(e) =>
                 setFormData({ ...formData, email: e.target.value })
               }
-              className="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
+              className="w-full px-4 py-2 rounded-full border border-white-300 dark:border-white-600 bg-white dark:bg-[beige] text-pulse-900 dark:text-pulse-600 focus:ring-8 focus:ring-ring focus:border-transparent transition-all"
             />
           </div>
 
           {/* Feedback */}
           <div>
-            <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+            <label className="block text-sm font-medium text-white dark:text-white-300 mb-2">
               Feedback Comments
             </label>
             <textarea
@@ -134,7 +134,7 @@ const FeedbackModal: React.FC<FeedbackModalProps> = ({ isOpen, onClose }) => {
               onChange={(e) =>
                 setFormData({ ...formData, feedback: e.target.value })
               }
-              className="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white resize-none"
+              className="w-full px-4 py-2 rounded-3xl border border-white-300 dark:border-white-600 bg-white dark:bg-[beige] text-pulse-900 dark:text-pulse-600 focus:ring-8 focus:ring-ring focus:border-transparent transition-all"
             />
           </div>
 
@@ -142,7 +142,7 @@ const FeedbackModal: React.FC<FeedbackModalProps> = ({ isOpen, onClose }) => {
           <button
             type="submit"
             disabled={isSubmitting}
-            className="w-full bg-pulse-500 hover:bg-pulse-600 text-white font-medium py-3 rounded-lg transition-all duration-300 disabled:opacity-50"
+            className="w-full bg-pulse-500 hover:bg-pulse-600 text-white font-medium py-3 rounded-lg transition-all duration-300 disabled:opacity-50 hover:bg-white hover:text-pulse-600"
           >
             {isSubmitting ? "Submitting..." : "Submit Feedback"}
           </button>

@@ -40,7 +40,7 @@ const Newsletter = () => {
   };
 
   return (
-    <section id="newsletter" className="bg-white dark:bg-gray-900 py-16">
+    <section id="newsletter" className="bg-white dark:bg-black py-16">
       <div className="section-container opacity-0 animate-on-scroll">
         <div className="max-w-6xl mx-auto">
           {/* Header Chip */}
@@ -72,7 +72,7 @@ const Newsletter = () => {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="Your email for updates"
-                className="w-full px-6 py-4 rounded-full border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-pulse-500 text-gray-700 dark:text-gray-300"
+                className="w-full px-6 py-4 rounded-full border border-pulse-500 dark:border-pulse-500 bg-white dark:bg-white focus:outline-none focus:ring-2 focus:ring-pulse-500 text-pulse-900 dark:text-pulse-900"
                 required
                 disabled={isSubmitting}
               />
@@ -80,11 +80,11 @@ const Newsletter = () => {
             <button
               type="submit"
               disabled={isSubmitting}
-              className={`bg-pulse-500 hover:bg-pulse-600 text-white font-medium py-4 px-10 rounded-full transition-all duration-300 md:ml-4 ${
+              className={`bg-pulse-500 hover:bg-pulse-600 text-white text-lg py-4 px-10 rounded-full transition-all duration-300 md:ml-4 ${
                 isSubmitting ? "opacity-70 cursor-not-allowed" : ""
               }`}
             >
-              {isSubmitting ? "Downloading..." : "Download Seminar Slides"}
+              {isSubmitting ? "Downloading..." : "Get Source"}
             </button>
           </form>
         </div>
